@@ -1007,8 +1007,8 @@ animation: fadeInTop 0.5s ease;
     height: 100%;
     z-index: 10000;
     overflow-y: scroll;
-    /* opacity: 0;
-    visibility: hidden; */
+    opacity: 0;
+    visibility: hidden;
     transition: all 0.3s ease;
 }
 
@@ -1025,14 +1025,26 @@ animation: fadeInTop 0.5s ease;
     height: 100%;
     width: 100%;
     z-index: 1005;
-    background-color: var(--bg-black-50);
-    opacity: 0.5;
+    background-color: var(--bg-opacity);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.portfolio-popup .pp-loader.active{
+    visibility: visible;
+    opacity: 1;
 }
 
 .portfolio-popup .pp-loader div{
     height: 40px;
     width: 40px;
-    background-color: red;
+    border: 3px solid var(--skin-color);
+    border-radius: 50%;
+    border-right: 3px solid transparent;
+    animation: spin 1.5s linear infinite;
 }
 
 .portfolio-popup .pp-details{

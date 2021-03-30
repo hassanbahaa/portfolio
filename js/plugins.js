@@ -108,7 +108,14 @@ PORTFOLIO FILTER & POP UP
             const imgSrc = screenshots[slideIndex];
             const popupImg = popup.querySelector(".pp-img");
             // activate loader until photos loaded
+            popup.querySelector(".pp-loader").classList.add("active");
             popupImg.src = imgSrc;
+
+            popupImg.onload = () => {
+                console.log("popup photo loaded");
+                // deactivate loader after the pupup photo load
+             popup.querySelector(".pp-loader").classList.remove("active");
+            }
         }
 
 })();
