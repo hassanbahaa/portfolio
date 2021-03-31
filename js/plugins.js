@@ -89,14 +89,33 @@ PORTFOLIO FILTER & POP UP
                 screenshots = portfolioItems[itemIndex].querySelector(".portfolio-item-img img").getAttribute("data-screenshots");
                 // convert screenshots into array
                 screenshots = screenshots.split(",");
+                if(screenshots.length === 1){
+                    prevBtn.style.display="none";
+                    nextBtn.style.display="none";
+                } else {
+                    prevBtn.style.display="block";
+                    nextBtn.style.display="block";
+                }
                 slideIndex = 0;
                 popupToggle();
                 popupSlideshow();
+                popupDetails();
             }
         })
 
         closeBtn.addEventListener("click", () => {
             popupToggle();
+           
+
+            //remove the active class from the details part 
+
+            if ( projectDetailsContainer.classList.contains("active") ) {
+                // console.log("true");
+                // projectDetailsContainer.classList.remove("active");
+                // projectDetailsContainer.style.maxHeight = 0 + "px"
+                popupDetailsToggle();
+            }
+            
         })
 
         function popupToggle() {
@@ -112,12 +131,75 @@ PORTFOLIO FILTER & POP UP
             popupImg.src = imgSrc;
 
             popupImg.onload = () => {
-                console.log("popup photo loaded");
+                // console.log("popup photo loaded");
                 // deactivate loader after the pupup photo load
              popup.querySelector(".pp-loader").classList.remove("active");
             }
+            popup.querySelector(".pp-counter").innerHTML = (slideIndex+1) + " Of " + screenshots.length;
         }
 
+        // next slide 
+        nextBtn.addEventListener("click", () => {
+            if(slideIndex === screenshots.length-1 ){
+                slideIndex = 0;
+            } else {
+                slideIndex++; 
+            }
+            popupSlideshow();
+        })
+
+
+        // prev slide
+
+        prevBtn.addEventListener("click", () => {
+            if(slideIndex === screenshots.length-1 ){
+                slideIndex = 0;
+            } else {
+                slideIndex--; 
+            }
+            popupSlideshow();
+        })
+
+        function popupDetails() {
+            // if portfolio-item-details not there
+            if (!portfolioItems[itemIndex].querySelector(".portfolio-item-details")){
+                projectDetailsBtn.style.display = "none";
+                return;
+            }
+
+
+            // get the project details
+            const details = portfolioItems[itemIndex].querySelector(".portfolio-item-details").innerHTML;
+            // set the project details
+            popup.querySelector(".pp-project-details").innerHTML = details;
+            // get the project title
+            const title = portfolioItems[itemIndex].querySelector(".portfolio-item-title").innerHTML ;
+            popup.querySelector(".pp-title h2").innerHTML = title;
+            const category = portfolioItems[itemIndex].getAttribute("data-category");
+            console.log(category);
+            popup.querySelector(".pp-project-category").innerHTML = category.split("-").join(" ");
+        }
+
+        projectDetailsBtn.addEventListener("click",() =>{
+            popupDetailsToggle();
+        })
+
+        function popupDetailsToggle() {
+            if ( projectDetailsContainer.classList.contains("active") ) {
+                console.log("true");
+                projectDetailsBtn.querySelector("svg").classList.remove("fa-minus");
+                projectDetailsBtn.querySelector("svg").classList.add("fa-plus");
+                projectDetailsContainer.classList.remove("active");
+                projectDetailsContainer.style.maxHeight = 0 + "px";
+
+            } else{
+                projectDetailsBtn.querySelector("svg").classList.remove("fa-plus");
+                projectDetailsBtn.querySelector("svg").classList.add("fa-minus");
+                projectDetailsContainer.classList.add("active");
+                projectDetailsContainer.style.maxHeight = projectDetailsContainer.scrollHeight + "px";
+                popup.scrollTo(0,projectDetailsContainer.offsetTop);
+            }
+        }
 })();
 
 

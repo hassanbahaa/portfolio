@@ -1054,6 +1054,11 @@ animation: fadeInTop 0.5s ease;
     max-height: 0;
     overflow: hidden;
     opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.portfolio-popup .pp-details.active{
+    opacity: 1;
 }
 
 .portfolio-popup .pp-details-inner{
@@ -1085,7 +1090,7 @@ animation: fadeInTop 0.5s ease;
 
 .portfolio-popup .pp-title p span{
     font-weight: 400;
-
+    text-transform: capitalize;
 }
 
 .portfolio-popup .pp-project-details h3{
@@ -1125,7 +1130,9 @@ animation: fadeInTop 0.5s ease;
 
 .portfolio-popup .info ul li span{
     font-weight: 400;
-
+}
+.portfolio-popup .info ul li a{
+    color: var(--skin-color);
 }
 
 .portfolio-popup .info ul li:last-child{
@@ -1253,28 +1260,179 @@ animation: fadeInTop 0.5s ease;
     margin-left: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* End Portfolio Popup */
+
+
+
+/*
+ ================================================================ 
+ ================================================================ 
+ ================================================================ 
+ ================================================================ 
+ ================================================================ 
+ ================================================================ 
+*/
+
+
+/* Start Testmonial Section */
+
+.testmonial-section{
+    padding: 80px 0 80px;
+    min-height: 100vh;
+}
+
+.testmonial-section .testi-box{
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.testmonial-section .testi-slider{
+    border-radius: 15px;
+}
+
+.testmonial-section .testi-item{
+    padding: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.testmonial-section .testi-item svg{
+    position: absolute;
+    font-size: 30px;
+    color: var(--text-black-600);
+    opacity: 0.1;
+}
+
+.testmonial-section .testi-item svg.left{
+    left: 5px;
+    top: 5px;
+}
+
+.testmonial-section .testi-item svg.right{
+    right: 5px;
+    bottom: 5px;
+}
+
+.testmonial-section .testi-item p{
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--text-black-600);
+    margin: 0 0 30px;
+}
+
+.testmonial-section .testi-item img{
+    max-width: 70px;
+    display: inline-block;
+    width: 100%;
+}
+
+.testmonial-section .testi-item span{
+    display: block;
+    margin: 10px 0 0;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-black-700);
+    text-transform: capitalize;
+}
+
+.testmonial-section .testi-slider-nav{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.testmonial-section .testi-slider-nav span{
+    height: 40px;
+    width: 40px;
+    color: var(--skin-color);
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    line-height: 40px;
+    margin: 0 4px;
+}
+
+.testmonial-section .testi-slider-nav span:after{
+    border-radius: 50%;
+}
+
+.testmonial-section .testi-slider-nav span svg{
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* End Testmonial Section */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
