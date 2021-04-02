@@ -307,6 +307,7 @@ PORTFOLIO FILTER & POP UP
           slides.forEach((slide) =>{
              slide.style.width = slideWidth + "px";
           })
+          // Here I need to make this function work auto if the window width change
           // set width of sliderContainer
           sliderContainer.style.width = slideWidth * slides.length + "px";
 
