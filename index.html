@@ -6,22 +6,31 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="css/all.css" > 
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-             <link rel="stylesheet" href="css/style.css">
-             <link rel="stylesheet" href="css/skins/color-1.css">             
-             <script defer src="js/all.js"></script> 
+            <link rel="stylesheet" href="css/style.css">
+            <link rel="stylesheet" href="css/skins/color-1.css">         
+              <!-- style switcher -->
+              <link rel="stylesheet" class="alternate-style" title="color-1" href="css/skins/color-1.css" 
+              disabled>
+              <link rel="stylesheet" class="alternate-style" title="color-2" href="css/skins/color-2.css" disabled>
+              <link rel="stylesheet" class="alternate-style" title="color-3" href="css/skins/color-3.css" disabled>
+              <link rel="stylesheet" class="alternate-style" title="color-4" href="css/skins/color-4.css" disabled>
+              <link rel="stylesheet" class="alternate-style" title="color-5" href="css/skins/color-5.css" disabled>
+
+              <link rel="stylesheet" href="css/style-switcher.css">    
+            <script defer src="js/all.js"></script> 
 
              <title>Portfolio</title>
         </head>
                     
 
-        <body>
+        <body class="dark">
 
             <!-- start header -->
             <header class="header">
                 <div class="container">
                     <div class="row justify-content-between">
                         <div class="logo">
-                            <a href="Index.html">H</a>
+                            <a href="#home" class="link-item">H</a>
                         </div>
                         <div class="hamburger-btn outer-shadow hover-in-shadow">
                             <span></span>
@@ -36,21 +45,23 @@
                 <div class="close-nav-menu outer-shadow hover-in-shadow">&times;</div>
                 <div class="nav-menu-inner">
                     <ul>
-                        <li><a href="#" class="inner-shadow active">Home</a></li>
-                        <li><a href="#" class="outer-shadow hover-in-shadow">About</a></li>
-                        <li><a href="#" class="outer-shadow hover-in-shadow">Services</a></li>
-                        <li><a href="#" class="outer-shadow hover-in-shadow">Portfolio</a></li>
-                        <li><a href="#" class="outer-shadow hover-in-shadow">testimonial</a></li>
-                        <li><a href="#" class="outer-shadow hover-in-shadow">Contact</a></li>
+                        <li><a href="#home" class="link-item inner-shadow active">Home</a></li>
+                        <li><a href="#about" class="link-item outer-shadow hover-in-shadow">About</a></li>
+                        <li><a href="#services" class="link-item outer-shadow hover-in-shadow">Services</a></li>
+                        <li><a href="#portfolio" class="link-item outer-shadow hover-in-shadow">Portfolio</a></li>
+                        <li><a href="#testimonial" class="link-item outer-shadow hover-in-shadow">testimonial</a></li>
+                        <li><a href="#contact" class="link-item outer-shadow hover-in-shadow">Contact</a></li>
                     </ul>
                 </div>
                 <!-- Copyright text -->
                 <p class="copyright-text"> &copy; 2020 Hassan Bahaa </p>
+                
             </nav>
+            <div class="fade-out-effect"></div>
             <!-- End Navigation Section -->
 
             <!-- Start Home section -->
-            <section class="home-section section">
+            <section class="home-section section active" id="home">
                 <!-- Start effect wrap -->
                 <div class="effect-wrap">
                     <div class="effect effect-1">
@@ -104,7 +115,7 @@
                             <p class="">Hello</p>
                             <h2>I'm Hassan</h2>
                             <h1>Web Developer</h1>
-                            <a href="#" class="btn-1 outer-shadow hover-in-shadow">More About Me</a>
+                            <a href="#about" class="link-item btn-1 outer-shadow hover-in-shadow">More About Me</a>
                         </div>
                         <div class="home-img">
                             <div class="img-box inner-shadow">
@@ -118,7 +129,7 @@
             <!-- End Home section -->
 
             <!-- Start About Section -->
-             <section class="about-section section">
+             <section class="about-section section" id="about">
                 <div class="container">
                     <div class="row">
                         <div class="section-title">
@@ -148,7 +159,7 @@
                                 The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
                             </p>
                             <a href="cv.pdf" class="btn-1 outer-shadow hover-in-shadow">Download CV</a>
-                            <a href="#" class="btn-1 outer-shadow hover-in-shadow">Hire Me</a>
+                            <a href="#contact" class=" link-item btn-1 outer-shadow hover-in-shadow">Hire Me</a>
                         </div>
                     </div>
                     <!-- Start about tabs -->
@@ -388,13 +399,9 @@
 
              <!-- ================================================================ -->
              <!-- ================================================================ -->
-             <!-- ================================================================ -->
-             <!-- ================================================================ -->
-             <!-- ================================================================ -->
-             <!-- ================================================================ -->
 
              <!-- Start Services Section -->
-             <section class="service-section">
+             <section class="service-section section" id="services">
                  <div class="container">
                      <div class="row">
                          <div class="section-title">
@@ -501,20 +508,11 @@
              </section>
              <!-- End Services Section -->
 
-
-
              <!-- ================================================================ -->
              <!-- ================================================================ -->
-             <!-- ================================================================ -->
-             <!-- ================================================================ -->
-             <!-- ================================================================ -->
-             <!-- ================================================================ -->
-
-
-
              <!-- Start Portfolio Section -->
 
-             <section class="portfolio-section section">
+             <section class="portfolio-section section" id="portfolio">
                  <div class="container">
                      <div class="row">
                          <div class="section-title">
@@ -702,15 +700,8 @@
 
              <!-- End Portfolio Section -->
 
-
              <!-- ================================================================ -->
              <!-- ================================================================ -->
-             <!-- ================================================================ -->
-             <!-- ================================================================ -->
-             <!-- ================================================================ -->
-             <!-- ================================================================ -->
-
-
              <!-- Start Portfolio Popup -->
 
              <div class=" pp portfolio-popup">
@@ -773,24 +764,12 @@
 
              <!-- End Portfolio Popup -->
 
-
              <!-- ================================================================ -->
              <!-- ================================================================ -->
-             <!-- ================================================================ -->
-             <!-- ================================================================ -->
-             <!-- ================================================================ -->
-             <!-- ================================================================ -->
-             <!-- ================================================================ -->
-             <!-- ================================================================ -->
-             <!-- ================================================================ -->
-             <!-- ================================================================ -->
-             <!-- ================================================================ -->
-             <!-- ================================================================ -->
-
 
              <!-- Start Testmonial Section -->
 
-             <section class="testmonial-section section">
+             <section class="testmonial-section section" id="testimonial">
                 <div class="container">
                     <div class="row">
                         <div class="section-title">
@@ -802,7 +781,7 @@
                             <div class="testi-slider outer-shadow">
                                 <div class="testi-slider-container">
                                     <!-- Start testi item -->
-                                    <div class="testi-item">
+                                    <div class="testi-item active">
                                         <i class="fas fa-quote-left left"></i>
                                         <i class="fas fa-quote-right right"></i>
                                         <p>
@@ -854,9 +833,110 @@
              </section>
              
              <!-- End Testmonial Section -->
+             <!-- ================================================================ -->
+             <!-- ================================================================ -->
+             <!-- Start Contact Form -->
+
+             <section class="contact-section section" id="contact">
+                 <div class="container">
+                     <div class="row">
+                         <div class="section-title">
+                             <h2 data-heading="Contact">Get In Touch</h2>
+                         </div>
+                     </div>
+                     <div class="row">
+                         <!-- Start Contact Item -->
+                        <div class="contact-item">
+                            <div class="contact-item-inner outer-shadow">
+                                <i class="fas fa-phone"></i>
+                                <span>Phone</span>
+                                <p>010 9679 3392</p>
+                            </div>
+                        </div>
+                         <!-- End Contact Item -->
+
+                         <!-- Start Contact Item -->
+                        <div class="contact-item">
+                            <div class="contact-item-inner outer-shadow">
+                                <i class="fas fa-envelope"></i>
+                                <span>Mail</span>
+                                <p>hassanbahaa45@gmail.com</p>
+                            </div>
+                        </div>
+                         <!-- End Contact Item -->
+
+                         <!-- Start Contact Item -->
+                        <div class="contact-item">
+                            <div class="contact-item-inner outer-shadow">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>What'sApp</span>
+                                <p>010 9679 3392</p>
+                            </div>
+                        </div>
+                         <!-- End Contact Item -->
 
 
+                     </div>
+                     <div class="row">
+                         <div class="contact-form">
+                             <form action="">
+                                 <div class="row">
+                                     <div class="w-50">
+                                         <div class="input-group outer-shadow hover-in-shadow">
+                                             <input type="text" placeholder="Name" class="input-control">
+                                         </div>
+                                         <div class="input-group outer-shadow hover-in-shadow">
+                                            <input type="text" placeholder="Email" class="input-control">
+                                        </div>
+                                        <div class="input-group outer-shadow hover-in-shadow">
+                                            <input type="text" placeholder="Subject" class="input-control">
+                                        </div>
+                                     </div>
+                                     <div class="w-50">
+                                         <div class="input-group outer-shadow hover-in-shadow">
+                                             <textarea class="input-control" placeholder="Message"></textarea>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="row">
+                                     <div class="submit-btn">
+                                         <button type="submit" class="btn-1 outer-shadow hover-in-shadow">Send Message</button>
+                                     </div>
+                                 </div>
+                             </form>
+                         </div>
+                     </div>
+                 </div>
+             </section>
 
+             <!-- End Contact Form -->
+
+            <!-- ================================================================ -->
+            <!-- ================================================================ -->
+
+            <!-- Start Style Switch -->
+
+             <div class="style-switcher outer-shadow">
+                 <div class="style-toggler s-icon outer-shadow hover-in-shadow">
+                     <i class="fas fa-cog fa-spin"></i>
+                 </div>
+                 <div class="day-night s-icon outer-shadow hover-in-shadow">
+                     <i class="fas"></i>
+                 </div>
+                 <h4>
+                     Theme colors
+                 </h4>
+                 <div class="colors">
+                     <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+                     <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+                     <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+                     <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+                     <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+                 </div>
+             </div>
+
+            <!-- End Style Switch -->
+             
 
 
 
@@ -868,5 +948,6 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
         <script src="js/plugins.js"></script>
+        <script src="js/style-switcher.js"></script>
         </body>
 	</html>
